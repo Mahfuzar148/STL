@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    deque<int>dq;
+    ///5 element push in the front of deque
+    for(int i=1;i<=5;i++) dq.push_front(i);
+    ///5 element push in the back of deque
+     for(int i=6;i<=10;i++) dq.push_back(i);
+
+     ///size of deque
+     cout<<"Size = "<<dq.size()<<endl;
+     ///all element print of dq
+      for(int i=0;i<dq.size();i++) cout<<dq[i]<<" ";
+      cout<<endl;
+     ///print front element and back element of deque
+     cout<<"front element = "<<dq.front()<<"  "<<"Back element = "<<dq.back()<<endl;
+
+     ///delete back element of deque
+     dq.pop_back();
+     /// delete front element of deque
+     dq.pop_front();
+     ///front element and back element of dq after deleting .
+      cout<<"front element = "<<dq.front()<<"  "<<"Back element = "<<dq.back()<<endl;
+      return 0;
+
+}
