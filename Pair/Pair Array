@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    /** pair declaration */
+
+    pair<string,int>p1,p2;
+    p1= make_pair("Mahfuz",2);
+    p2 = {"Mahfuzar",3};
+    cout<<p1.first<<" "<<p1.second<<endl;
+    cout<<p2.first<<" "<<p2.second<<endl;
+
+    /** Pair Arrar*/
+    int a[] ={1,2,3};
+    int b[] = {2,3,4};
+    pair<int,int>p_array[3];
+    p_array[0]={1,2};
+    p_array[1]={2,3};
+    p_array[2]={3,4};
+    for(auto it : p_array)
+    {
+        cout<<it.first<<"  "<<it.second<<endl;
+    }
+    for(int i=0;i<3;i++)
+    {
+        cout<<p_array[i].first<<" "<<p_array[i].second<<endl;
+    }
+    return 0;
+}
