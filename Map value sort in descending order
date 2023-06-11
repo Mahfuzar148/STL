@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool cmp(pair<string, int>& a,
+		pair<string, int>& b)
+{
+	return a.second > b.second;
+}
+
+void sort(map<string, int>& M)
+{
+
+
+	vector<pair<string, int> > A;
+
+	for (auto& it : M) {
+		A.push_back(it);
+	}
+
+	sort(A.begin(), A.end(), cmp);
+
+
+	for (auto& it : A) {
+
+		cout << it.first << ' '
+			<< it.second << endl;
+	}
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int n;
+    cin>>n;
+    string t1,t2;
+    char c;
+    map<string ,int>mp;
+    for(int i=1;i<=n;i++){
+        cin>>t1>>t2>>c;
+        if(c=='W')
+        {
+            mp[t1]+=3;
+            mp[t2]+=0;
+        }
+        else
+        {
+            mp[t1]++;
+            mp[t2]++;
+        }
+
+    }
+    sort(mp);
+    return 0;
+
+}
